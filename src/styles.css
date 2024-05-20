@@ -1,0 +1,89 @@
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#121212, #212b46);
+}
+
+.title {
+    font-size: 3.5rem;
+    color: #FFF;
+    animation: flipTitle 1.5s;
+}
+
+@keyframes flipTitle {
+    from {
+        transform: rotateX(90deg);
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}
+
+.input {
+     background-color: rgba(255, 255, 255, 0.2);
+     padding: 15px;
+     display: flex;
+     gap: 10px;
+     border-radius: 8px;
+     margin-block: 25px;
+     box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.input input {
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+    outline: none;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.input input::placeholder {
+    color: #FFF;
+}
+
+.input button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input button:hover {
+    transform: scale(1.2);
+    transition: 200ms;
+}
+
+.content {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    padding-block: 15px;
+    min-width: 325px;
+    gap: 10px;
+}
+
+.content h2 {
+   font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .content h2 {
+        font-size: 25px;
+    }
+
+    .content {
+        width: 70%;
+    }
+}
